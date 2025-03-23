@@ -1,0 +1,9 @@
+ul{
+    background-color: gray;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+ul:hover{
+    background-color: rgb(123, 120, 120);
+}
