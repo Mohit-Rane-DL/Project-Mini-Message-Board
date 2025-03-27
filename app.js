@@ -11,5 +11,5 @@ const assetsPath = path.join(__dirname, 'public');
 app.use(express.static(assetsPath));
 app.use('/', usersRouter);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Express app is listening on ${PORT}`));
