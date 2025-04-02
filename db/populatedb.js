@@ -15,7 +15,7 @@ VALUES ('Amando', 'Hi there', '2025-03-21'), ('Charles', 'Hello World', '2025-03
 async function main() {
     console.log('...seeding');
     const client = new Client({
-        connectionString: process.env.DATABASE_URL
+        connectionString: process.env.DATABASE_URL,
     });
 
     await client.connect();
