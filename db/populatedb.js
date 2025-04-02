@@ -14,10 +14,10 @@ VALUES ('Amando', 'Hi there', '2025-03-21'), ('Charles', 'Hello World', '2025-03
 async function main() {
     console.log('...seeding');
     const client = new Client({
-        host: process.env.DB_HOST,
-        user: process.env.DB_USER,
-        database: process.env.DB_DATABASE,
-        password: process.env.DB_PASSWORD,
+        connectionString: process.env.DATABASE_URL,
+        ssl: {
+        rejectUnauthorized: false, // This allows you to connect to Railway's private database with SSL enabled
+        }
     });
 
     await client.connect();
