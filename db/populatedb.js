@@ -22,9 +22,15 @@ async function main() {
         port: process.env.DB_PORT,
     });
 
-    await client.connect();
-    await client.query(SQL);
-    await client.end();
+    try {
+        await client.connect();
+        await client.query(SQL);
+        console.log('Database seeded successfully');
+    } catch (err) {
+        console.error('Error seeding the database:', err);
+    } finally {
+        await client.end();
+    }
     console.log('done');
 }
 
